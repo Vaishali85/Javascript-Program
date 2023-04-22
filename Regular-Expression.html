@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expression</title>
+</head>
+
+<body>
+
+    <script>
+        /***********************/ /********************************/
+        var day = 'Have a good day';
+        document.write(day.search(/GOOD/i) + '<br>');
+
+        /*************************i******************************/
+        var day = 'have a good day';
+        document.write(day.replace(/Good/i, 'nice') + '<br>');
+
+        /*************************g=global******************************/
+        var day2 = 'pune is clean city also pune is green city';
+        document.write(day2.match(/city/gi) + '<br>');
+
+        /*************************[a-z]=all a to z******************************/
+
+        document.write(day.match(/[A-S]/gi) + '<br>');
+
+        /*************************^[a-z]=not a to z******************************/
+
+        document.write(day.match(/[^a]/gi) + '<br>');
+
+        /*************************[0-9]=all 0 to 9******************************/
+        var day3 = '7378413002';
+        document.write(day3.match(/[1-5]/gi) + '<br>');
+
+        /*************************^[0-9]=not 0 to 9******************************/
+        document.write(day3.match(/[^7]/gi) + '<br>');
+
+        /*************************[\w] only word******************************/
+        var day4 = 'I got 85% in my exam';
+        document.write(day4.match(/[\w]/gi) + '<br>');
+
+        /*************************[\W] not word******************************/
+        document.write(day4.match(/[\W]/gi) + '<br>');
+
+        /*************************[\d] only digit******************************/
+
+        document.write(day4.match(/[\d]/gi) + '<br>');
+
+        /*************************[\D] not digit******************************/
+
+        document.write(day4.match(/[\D]/gi) + '<br>');
+
+        /*************************[\b] begining******************************/
+
+        document.write(day.match(/[\bha]/gi) + '<br>');
+
+        /*************************[\B]opposite of \b ******************************/
+        document.write(day.match(/[\Bd]/gi) + '<br>');
+
+        /*************************[\s]******************************/
+        document.write(day.match(/[\s]/gi) + '<br>');
+
+        /*************************[\S]******************************/
+        document.write(day.match(/[\S]/gi) + '<br>');
+
+        /************************test******************************/
+        var day6 = 'have a good day ram';
+        var p = /ram/;
+        document.write(p.test('ram') + '<br>');
+
+        /*************************multiline*****************************/
+        var day7 = 'have a nice day' + 'same to you' + 'have a great day';
+        var x = /[$you]/gm;
+        var s = day.match(x);
+        document.write(s);
+
+        /*******************************************************/
+    </script>
+
+</body>
+
+</html>
