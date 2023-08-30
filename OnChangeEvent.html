@@ -16,7 +16,10 @@
     <div class="container">
         No1:<input type="text" id="no1"> No2:<input type="text" id="no2" onchange="abc();">
 
-        <p id="ans"></p>
+        <p id="no3"></p>
+        <p id="no4"></p>
+        <p id="no5"></p>
+        <p id="no6"></p>
     </div>
 
     <script>
@@ -24,7 +27,21 @@
             no1 = parseInt(document.getElementById('no1').value);
             no2 = parseInt(document.getElementById('no2').value);
             no3 = no1 * no2;
-            document.getElementById('ans').innerHTML = no3;
+            
+            no4 = no1 + no2;
+            no5 = no1 - no2;
+            no6 = no1 / no2;
+
+          //document.getElementById('no3').innerHTML = no3;
+ 
+            document.getElementById('no3').innerHTML="Multi : &nbsp" + no3;
+
+            document.getElementById('no4').innerHTML ="Add : &nbsp"+ no4;
+            document.getElementById('no5').innerHTML ="Sub : &nbsp"+ no5;
+            document.getElementById('no6').innerHTML = "Div : &nbsp"+ no6;
         }
+
+
+        
     </script>
 </body>
