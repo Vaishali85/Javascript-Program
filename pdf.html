@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Generate PDF</title>
+   <style>
+      
+   </style>
+</head>
+<body>
+   <div class="container">
+      <button id="pdfButton"><b> PDF</b></button>
+      <div class="card" id="generatePDF">
+         <button class="btn-primary">hiii</button>
+      </div>
+   </div>
+   <script>
+      var button = document.getElementById("pdfButton");
+      var makepdf = document.getElementById("generatePDF");
+      button.addEventListener("click", function () {
+         var mywindow = window.open("", "PRINT");
+         mywindow.document.write(makepdf.innerHTML);
+         mywindow.document.close();
+         mywindow.focus();
+         mywindow.print();
+         return true;
+      });
+   </script>
+</body>
+</html>
