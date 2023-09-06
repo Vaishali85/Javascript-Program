@@ -29,12 +29,11 @@
             <input type="text" id="gst" onchange="multi();">&nbsp;&nbsp; Total Prize:
             <input type="text" id="total" style="color:red">
 
-            <button class="btn btn-primary " onclick="table();"> Add</button>
+            <button class="btn btn-primary " onclick="table()";>Add</button>
 
 
         </div><br><br>
-
-
+        
 
         <div id="t" style="display:none;">
             <table class="table-bordered table-responsive">
@@ -42,6 +41,7 @@
                     <th>Name</th>
                     <th>Email</th>
                     <th>Number</th>
+                    <th>Product</th>
                     <th>Quantity</th>
                     <th>Prize</th>
                     <th>Discount(5%)</th>
@@ -53,14 +53,16 @@
                     <td><input type="text" id="name1"></td>
                     <td><input type="text" id="email1"></td>
                     <td><input type="text" id="number1"></td>
+                    <td><input type="text" id="product1"></td>
                     <td><input type="text" id="quantity1"></td>
                     <td><input type="text" id="prize1"></td>
                     <td><input type="text" id="discount1"></td>
                     <td><input type="text" id="gst1"></td>
-                    <td><input type="text" id="total prize1"></td>
+                    <td><input type="text" id="tprize"></td>
                 </tr>
             </table>
         </div>
+        
         <p id="f1"></p>
         <p id="f2"></p>
         <p id="t"></p>
@@ -75,12 +77,12 @@
         function multi() {
             no1 = document.getElementById('prize').value;
             no2 = document.getElementById('quantity').value;
-            no3 = document.getElementById('discount').value;
-            no4 = document.getElementById('gst').value;
+            no3 = parseInt(document.getElementById('discount').value);
+            no4 = parseInt(document.getElementById('gst').value);
 
-            no5 = no1 * no2 + no3 - no4;
-            document.getElementById('total').value = no5;
-            // document.getElementById('total').innerHTML = no5;
+            ans = (no1 * no2) -no3 + no4;
+        document.getElementById('total').value=ans;
+            //ans=document.getElementById('total1').value;
         }
 
         function table() {
@@ -100,6 +102,19 @@
 
             quantity = document.getElementById('quantity').value;
             document.getElementById('quantity1').value = quantity;
+
+            prize = document.getElementById('prize').value;
+            document.getElementById('prize1').value = prize;
+
+            discount = document.getElementById('discount').value;
+            document.getElementById('discount1').value = discount;
+
+            gst = document.getElementById('gst').value;
+            document.getElementById('gst1').value = gst;
+
+           tprize =document.getElementById('total').value;
+            document.getElementById('tprize').value=tprize;
+
         }
     </script>
 </body>
