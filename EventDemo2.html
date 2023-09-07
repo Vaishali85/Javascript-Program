@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <head>
     <title>Event Demo</title>
 
@@ -10,45 +9,158 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
-    <!--------------------------------------------------------------->
+ <!--------------------------------------------------------------->
 
-</head>
+</head>  
 
 <body>
     <div class="container">
         <button class="btn btn-primary" onclick="form1();">Registration</button>
+        
+        
         <div id="f1"></div>
         <div id="f2"></div>
         <div id="f3"></div>
-    </div>
+
+        
+        <p id="name11"></p>
+        <p id="email11"></p>
+        <p id="mobile11"></p>
+        <p id="gender11"></p>
+        <p id="dob11"></p>
+        <p id="address11"></p>
+        <p id="height11"></p>
+        <p id="weight11"></p>
+        
+        <p id="fname11"></p>
+        <p id="mname11"></p>
+        <p id="lname11"></p>
+        <p id="foccupation11"></p>
+        <p id="moccupation11"></p>
+        <p id="income11"></p>
+        <p id="sibling11"></p>
+        <p id="faddress11"></p>
+        
+        <p id="ssc11"></p>
+        <p id="hsc11"></p>
+        <p id="diploma11"></p>
+        <p id="grad11"></p>
+        <p id="pg11"></p>
+        <p id="phd11"></p>
+        <p id="aadhar11"></p>
+        <p id="pan11"></p>
+        
+    
     <script>
         function form1() {
-            document.getElementById('f1').innerHTML = "<div style='border:2px solid red;adding:20px;'><h4 class='text-center text-primary'>Personal Infromation</h4>Name: <input type='text' id='name'> &nbsp; Email: <input type='text' id='email'>&nbsp; DOB:<inpu t type='text' id='dob'><br> <br>Gender:<input type='text' id='gender'>&nbsp; Name: <input type='text' id='name'> &nbsp; Email: <input type='text' id='email'><br><br> DOB:<input type='text' id='dob'> &nbsp; Gender:<input type='text' id='gender'>&nbsp;&nbsp;&nbsp;<button class='btn btn-danger' onclick='form2();' >Next</div>";
+            document.getElementById('f1').innerHTML = "<div style='border:2px solid red;adding:20px;'><h4 class='text-center text-primary'>Personal Infromation</h4>Name: <input type='text' id='name'> &nbsp; Email: <input type='text' id='email'>&nbsp; Mobile:<input type='text' id='mobile'><br> <br>Gender:<input type='text' id='gender'>&nbsp; DOB: <input type='text' id='dob'> &nbsp; Address: <input type='text' id='address'><br><br> Height:<input type='text' id='height'> &nbsp; Weight:<input type='text' id='weight'>&nbsp;&nbsp;&nbsp;<button class='btn btn-danger' onclick='form2();' >Next</div>";
         }
 
         function form2() {
             document.getElementById('f1').style.display = 'none';
 
-            document.getElementById('f2').innerHTML = "<div style='border:2px solid red;adding:20px;'><h4 class='text-center text-primary'>Family Infromation</h4>Name: <input type='text' id='name'> &nbsp; Email: <input type='text' id='email'>&nbsp; DOB:<input type='text' id='dob'><br> <br>Gender:<input type='text' id='gender'>&nbsp; Name: <input type='text' id='name'> &nbsp; Email: <input type='text' id='email'><br><br> DOB:<input type='text' id='dob'> &nbsp; Gender:<input type='text' id='gender'>&nbsp;&nbsp;&nbsp;<button class='btn btn-danger' onclick='form3();' >Next <button class='btn btn-primary' onclick='previous1();'>Previous</button></div>";
+            document.getElementById('f2').innerHTML = "<div style='border:2px solid red;adding:20px;'><h4 class='text-center text-primary'>Family Infromation</h4> Father Name: <input type='text' id='fname'> &nbsp; Mother Name: <input type='text' id='mname'>&nbsp; Last Name:<input type='text' id='lname'><br> <br>Father Occu: <input type='text' id='foccupation'> &nbsp;Mother Occu: <input type='text' id='moccupation'> Income:<input type='text' id='income'> <br><br> Num Siblings:<input type='text' id='sibling'> &nbsp; Address:<input type='text' id='faddress'>&nbsp;&nbsp;&nbsp;<button class='btn btn-danger' onclick='form3();' >Next <button class='btn btn-primary' onclick='previous1();'>Previous</button></div>";
         }
 
         function form3() {
             document.getElementById('f2').style.display = 'none';
-
-            document.getElementById('f3').innerHTML = "<div style='border:2px solid red;adding:20px;'><h4 class='text-center text-primary'>Education Infromation</h4>Name: <input type='text' id='name'> &nbsp; Email: <input type='text' id='email'>&nbsp; DOB:<input type='text' id='dob'><br> <br>Gender:<input type='text' id='gender'>&nbsp; Name: <input type='text' id='name'> &nbsp; Email: <input type='text' id='email'><br><br> DOB:<input type='text' id='dob'> &nbsp; Gender:<input type='text' id='gender'>&nbsp;&nbsp;&nbsp;<button class='btn btn-danger' onclick='getdata();'>Submit <button class='btn btn-primary' onclick='previous2();'>Previous</button></div>";
+            document.getElementById('f3').innerHTML = "<div style='border:2px solid red;adding:20px;'><h4 class='text-center text-primary'>Education Infromation</h4> SSC: <input type='text' id='ssc'> &nbsp; HSC: <input type='text' id='hsc'>&nbsp; Diploma:<input type='text' id='diploma'><br> <br>Grad:<input type='text' id='grad'>&nbsp; PG: <input type='text' id='pg'> &nbsp; Phd: <input type='text' id='phd'><br><br> Aadhar:<input type='text' id='aadhar'> &nbsp; Pan No:<input type='text' id='pan'>&nbsp;&nbsp;&nbsp;<button class='btn btn-danger' onclick='getdata();'>Submit <button class='btn btn-primary' onclick='previous2();'>Previous</button></div>";
         }
 
 
         function previous1() {
             document.getElementById('f1').style.display = 'block';
-
             document.getElementById('f2').style.display = 'none';
         }
 
         function previous2() {
             document.getElementById('f2').style.display = 'block';
-
-            document.getElementById('f3').style.display = 'none';
+           // document.getElementById('f3').style.display = 'none';
         }
-    </script>
-</body>
+        </script>
+<div>
+    <script>    
+    function getdata()
+        {
+          // <h1>Personal Infromation</h1>
+          document.getElementById('f3').style.display='block';
+          document.getElementById('f3').style.display = 'none';
+
+        
+            name1= document.getElementById('name').value;
+            document.getElementById('name11').innerHTML="<span class='text-danger'>Name:&nbsp</span>"+ name1;
+
+            email1=document.getElementById('email').value;
+            document.getElementById('email11').innerHTML="<span class='text-danger'>Email:</span>" + email1;
+
+            mobile1=document.getElementById('mobile').value;
+            document.getElementById('mobile11').innerHTML="<span class='text-danger'>Mobile: </span>"+ mobile1;
+
+            dob1=document.getElementById('dob').value;
+            document.getElementById('dob11').innerHTML="<span class='text-danger'>DOB: </span>"+dob1;
+
+            gender1=document.getElementById('gender').value;
+            document.getElementById('gender11').innerHTML="<span class='text-danger'>Gender: </span>"+gender1;
+
+            address1=document.getElementById('address').value;
+            document.getElementById('address11').innerHTML="<span class='text-danger'>Address: </span>"+address1;
+
+            height1=document.getElementById('height').value;
+            document.getElementById('height11').innerHTML="<span class='text-danger'>Height: </span>"+height1;
+
+            weight1=document.getElementById('weight').value;
+            document.getElementById('weight11').innerHTML="<span class='text-danger'>Weight: </span>"+weight1;
+
+            fname1=document.getElementById('fname').value;
+            document.getElementById('fname11').innerHTML="<span class='text-danger'>Father Name: </span>"+fname1;
+
+            mname1=document.getElementById('mname').value;
+            document.getElementById('mname11').innerHTML="<span class='text-danger'>Mother Name: </span>"+mname1;
+
+            lname1=document.getElementById('lname').value;
+            document.getElementById('lname11').innerHTML="<span class='text-danger'>Last Name: </span>"+lname1;
+
+            foccupation1=document.getElementById('foccupation').value;
+            document.getElementById('foccupation11').innerHTML="<span class='text-danger'>Father Occu: </span>"+foccupation1;
+
+            moccupation1=document.getElementById('moccupation').value;
+            document.getElementById('moccupation11').innerHTML="<span class='text-danger'>Mother Occu: </span>"+moccupation1;
+
+            income1=document.getElementById('income').value;
+            document.getElementById('income11').innerHTML="<span class='text-danger'>Income: </span>"+income1;
+
+            sibling1=document.getElementById('sibling').value;
+            document.getElementById('sibling11').innerHTML="<span class='text-danger'>Sibling: </span>"+sibling1;
+
+            faddress1=document.getElementById('faddress').value;
+            document.getElementById('faddress11').innerHTML="<span class='text-danger'>Address: </span>"+faddress1;
+
+            ssc1=document.getElementById('ssc').value;
+            document.getElementById('ssc11').innerHTML="<span class='text-danger'>SSC: </span>"+ssc1;
+
+            hsc1=document.getElementById('hsc').value;
+            document.getElementById('hsc11').innerHTML="<span class='text-danger'>HSC: </span>"+hsc1;
+
+            diploma1=document.getElementById('diploma').value;
+            document.getElementById('diploma11').innerHTML="<span class='text-danger'>Diploma: </span>"+diploma1;
+
+            grad1=document.getElementById('grad').value;
+            document.getElementById('grad11').innerHTML="<span class='text-danger'>Graduation: </span>"+grad1;
+
+            pg1=document.getElementById('pg').value;
+            document.getElementById('pg11').innerHTML="<span class='text-danger'>PG: </span>"+pg1;
+
+            phd1=document.getElementById('phd').value;
+            document.getElementById('phd11').innerHTML="<span class='text-danger'>PHD: </span>"+phd1;
+
+            aadhar1=document.getElementById('aadhar').value;
+            document.getElementById('aadhar11').innerHTML="<span class='text-danger'>Aadhar: </span>"+aadhar1;
+
+            pan1=document.getElementById('pan').value;
+            document.getElementById('pan11').innerHTML="<span class='text-danger'>Pan: </span>"+pan1;
+
+           
+
+        }
+
+        </script>
