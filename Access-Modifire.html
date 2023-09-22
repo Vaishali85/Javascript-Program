@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access-Modifire</title>
+</head>
+<body>
+    <script>
+        class parent1
+        {
+            home="sweet home";
+            // no1=91;
+            //  no2=100;
+            abc(no1,no2)
+
+            {
+                this.no1=no1;
+                this.no2=no2;
+                // no1=this.no1;
+                // no2=this.no2;
+                return no1+no2;
+                //var z=100;
+                //document.write(z);
+            }
+        }
+        var obj=new parent1;
+        var x =obj.abc(10,20);
+        document.write(x);
+        obj.abc();
+    </script>
+</body>
+</html>
