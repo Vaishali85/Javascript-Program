@@ -78,8 +78,13 @@ function validate() {
     /********************************* Validation for Checkbox ******************/
 
 
-    if (term == false) {
+    if (term.checked== false)
+    {
         alert("please check the box to continue");
+        return false;
+    }
+    else
+    {
         return true;
     }
 }
