@@ -74,7 +74,10 @@ document.write("<br>");
 document.write(city.sort());
 document.write("<br>");
 
-var city4 = [48, 78, 40, 38, 90, 21];
+
+//only first digit check krt ...
+var city4 = [48, 78,40, 38, 90, 21];
+//ans3=city4.sort();
 document.write(city4.sort());
 
 /***********************************************************/

@@ -1,6 +1,6 @@
 /*******************************IndexOf*************************************/
 var day = 'have a nice day';
-document.write(day.indexOf('a'));
+document.write(day.indexOf('day'));
 document.write("<br>");
 
 /*******************************LastIndexOf*************************************/
