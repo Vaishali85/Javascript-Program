@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Survey Form </title>
+    <script  src="validate.js" type="javascript/text"></script>
+    <style>
+ 
+        /* Styling the Body element i.e. Color, 
+        Font, Alignment */ 
+        body {
+            background-color:darkcyan;
+            font-family: 'Times New Roman';
+            text-align: center;
+        }
+ 
+        /* Styling the Form (Color, Padding, Shadow) */
+        form {
+            background-color: white;
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 30px 20px;
+            box-shadow: 2px 5px 10px black;
+        }
+ 
+        /* Styling form-control Class */
+        .form-control {
+            text-align: left;
+            margin-bottom: 25px;
+        }
+ 
+        /* Styling form-control Label */ 
+        .form-control label {
+            display: block;
+            margin-bottom: 10px;
+        }
+ 
+        /* Styling form-control input, 
+        select, textarea */
+        .form-control input,
+        .form-control select,
+        .form-control textarea {
+            border: 1px solid #777;
+            border-radius: 2px;
+            font-family: inherit;
+            padding: 10px;
+            display: block;
+            width: 95%;
+        }
+ 
+        /* Styling form-control Radio 
+        button and Checkbox */
+        .form-control input[type="radio"],
+        .form-control input[type="checkbox"] {
+            display: inline-block;
+            width: auto;
+        }
+ 
+        /* Styling Button */
+        button {
+            background-color: green;
+            border: 1px solid #777;
+            border-radius: 2px;
+            font-family: inherit;
+            font-size: 21px;
+            display: block;
+            width: 100%;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+
+        h6{
+            color: white;
+            font-family: 'Verdana';
+            text-align: center;
+        }
+    </style>
+</head>
+  
+<body>
+    <h1>Customer Survey Form</h1>
+  
+    <!-- Create Form -->
+    <form name="myForm" id="form" method="post" onsubmit="return validat()">
+ 
+        <!-- Details -->
+        <div class="form-control">
+            <label for="name" id="label-name" >First Name :</label>
+            <input type="text"id="name" placeholder="Enter your first name">
+        </div>
+  
+        <div class="form-control">
+            <label for="name" id="label-name">Last Name :</label>    
+            <input type="text"id="name" placeholder="Enter your last name"> 
+        </div>
+  
+        <div class="form-control">
+            <label for="dob" id="dob">DOB :</label>
+            <input type="date" id="dob">    
+            
+        </div>
+        <div class="form-control">
+            <label>Country :</label>
+            <!-- Dropdown options -->
+            <select name="country" id="country">
+                <option>Select your country</option>
+                <option>India</option>
+                <option>Pak</option>
+                <option>Nepal</option>
+                <option>UK</option>
+                <option>China</option>
+                <option>Japan</option>
+                <option>Other</option>
+            </select>
+        </div>
+  
+        <div class="form-control">
+            <!-- Input Type Radio Button -->
+            <label for="Gender">Gender :</label>
+                <input type="radio" name="gender" value="male">Male
+                <input type="radio" name="gender" value="female">Female
+            </label> 
+        </div>
+  
+        <div class="form-control">
+            <label>Profession :</label>
+            <!-- Input Type Checkbox -->
+            <select name="country" id="country">
+                <option>Select your Profession</option>
+                <option>Student</option>
+                <option>Farmer</option>
+                <option>Teacher</option>
+                <option>Police</option>
+                <option>Actor</option>
+                <option>Engineer</option>
+                <option>Politician</option>
+                <option>Other</option>           
+             </select>
+        </div>
+  
+        <div class="form-control">
+            <label for="email">Email :</label>
+            <input name="email" id="email" placeholder="Enter your email id">
+        </div>
+
+        <div class="form-control">
+            <label for="mobile">Mobile No :</label>
+            <input name="mobile" id="mobile" placeholder="Enter your mobile number">
+        </div>
+  
+        <!-- Multi-line Text Input Control -->
+        <button type="submit" value="submit">Submit</button>
+        <button type="reset" value="reset">Reset</button>
+
+    </form>
+    <h6>@All right are reserved | Design by Vaishali Bhujbal.</h6>
+</body>
+</html>
