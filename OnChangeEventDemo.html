@@ -59,13 +59,18 @@
                     <td><input type="text" id="discount1"></td>
                     <td><input type="text" id="gst1"></td>
                     <td><input type="text" id="tprize"></td>
+                    <td><button class="btn btn-primary">Print</button></td>
                 </tr>
+               
             </table>
+
         </div>
         
         <p id="f1"></p>
         <p id="f2"></p>
         <p id="t"></p>
+        
+        
     </div>
 
     <script>
@@ -114,6 +119,18 @@
 
            tprize =document.getElementById('total').value;
             document.getElementById('tprize').value=tprize;
+
+            // clear text //
+
+            document.getElementById('name').value='';
+            document.getElementById('email').value='';
+            document.getElementById('number').value='';
+            document.getElementById('product').value='';
+            document.getElementById('quantity').value='';
+            document.getElementById('prize').value='';
+            document.getElementById('discount').value='';
+            document.getElementById('gst').value='';
+            document.getElementById('total').value='';
 
         }
     </script>
